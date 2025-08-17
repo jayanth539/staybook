@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/hotel_booking
+    username: hotel_user
+    password: ChangeMe!123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  application:
+    name: StayBook
+
+server:
+  port: 8080
