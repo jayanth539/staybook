@@ -29,7 +29,7 @@ ready for extension into microservices and AWS deployment.
 ### Setup
 1. Clone the repo:
    ```bash
-   git clone https://github.com/<your-username>/staybook.git
+   git clone https://github.com/jayanth539/staybook.git
    cd staybook
    
 2. Update src/main/resources/application.yml with your PostgreSQL credentials.
