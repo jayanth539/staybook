@@ -1,0 +1,41 @@
+# StayBook – Hotel Booking System
+
+StayBook is a **Spring Boot and PostgreSQL based hotel booking system** that demonstrates
+end-to-end full stack development skills. It provides REST APIs for user management,
+hotel listings, and room bookings. The project is designed with clean architecture,
+ready for extension into microservices and AWS deployment.
+
+## ✨ Features
+- User management (register, view, roles: ADMIN / CUSTOMER)
+- Hotel management (create, list, pricing, locations)
+- Room booking (create, list bookings with check-in/out dates)
+- REST APIs with Spring Web
+- Database persistence with Spring Data JPA + PostgreSQL
+- Maven Wrapper included for easy build
+
+## 🛠 Tech Stack
+- **Backend**: Java 21, Spring Boot 3, Spring Data JPA
+- **Database**: PostgreSQL
+- **Build Tool**: Maven
+- **Deployment Ready**: Docker, AWS Free Tier
+
+## 🚀 Getting Started
+
+### Prerequisites
+- JDK 21
+- PostgreSQL 16+
+- Maven (or Maven Wrapper `./mvnw`)
+
+### Setup
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/<your-username>/staybook.git
+   cd staybook
+   
+2. Update src/main/resources/application.yml with your PostgreSQL credentials.
+3. Run the application:
+   ```bash
+   ./mvnw spring-boot:run
+   ```
+4. Access the API at `http://localhost:8080/api`.
+5. Use tools like Postman or cURL to test the endpoints.
