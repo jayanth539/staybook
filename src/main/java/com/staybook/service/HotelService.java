@@ -3,6 +3,7 @@ package com.staybook.service;
 import com.staybook.dto.HotelRequest;
 import com.staybook.dto.HotelResponse;
 import com.staybook.entity.Hotel;
+import com.staybook.exception.DuplicateResourceException;
 import com.staybook.repository.HotelRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,6 +17,11 @@ public class HotelService {
     private HotelRepository hotelRepository;
 
     public HotelResponse createHotel(HotelRequest hotelRequest) {
+
+        if (hotelRepository.existsByNameAndLocation(hotelRequest.name(), hotelRequest.location())) {
+            throw new DuplicateResourceException("Hotel already exists: "
+                    + hotelRequest.name() + " at " + hotelRequest.location());
+        }
         Hotel hotel = Hotel.builder()
                 .name(hotelRequest.name())
                 .pricePerNight(hotelRequest.pricePerNight())
